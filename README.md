@@ -37,12 +37,28 @@ clinical-prediction-model-paper-reading/
 - [详细12步框架](references/twelve-step-framework.md)：阅读问题、报告模板及参考文献。
 - [界面元数据](agents/openai.yaml)：技能显示名和默认提示语。
 
+## 📥 安装到Codex
+
+在Codex对话中复制并发送以下内容，让内置的Skill Installer完成安装：
+
+```text
+请使用 $skill-installer 安装以下GitHub仓库中的技能：
+
+https://github.com/BoBolol-CN/clinical-prediction-model-paper-reading
+
+SKILL.md 位于仓库根目录。
+安装名称：clinical-prediction-model-paper-reading
+```
+
+Codex支持从其他GitHub仓库安装技能，并自动识别新安装的技能。如果安装完成后仍未显示，重启Codex再试。[^2]
+
 ## ✍️ 使用示例
 
-在支持该技能的环境中提供论文正文、文件或链接，并调用：
+安装完成后，提供论文正文、文件或链接，并在Codex中发送：
 
 ```text
 $clinical-prediction-model-paper-reading
+
 请按12步精读这篇论文，重点拆解特征处理、建模与验证，
 核查关键方法引文，并总结方法学启示及适用条件。
 ```
@@ -50,6 +66,8 @@ $clinical-prediction-model-paper-reading
 也可以只阅读某一步：
 
 ```text
+$clinical-prediction-model-paper-reading
+
 请只展开第9步，说明作者怎样区分调参、内部验证与外部验证，
 并核查支持其验证方法的关键参考文献。
 ```
@@ -63,3 +81,4 @@ $clinical-prediction-model-paper-reading
 ## 🔗 参考依据
 
 [^1]: Efthimiou O, Seo M, Chalkou K, et al. Developing clinical prediction models: a step-by-step guide. *BMJ*. 2024;386:e078276. https://doi.org/10.1136/bmj-2023-078276
+[^2]: OpenAI. Build skills — Install curated skills for local use. https://learn.chatgpt.com/docs/build-skills#install-curated-skills-for-local-use
