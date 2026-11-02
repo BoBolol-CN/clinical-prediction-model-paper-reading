@@ -1,0 +1,4 @@
+interface:
+  display_name: "Clinical Prediction Model Paper Reading"
+  short_description: "按12步精读临床预测模型论文，核查建模、验证、补充材料和方法引文"
+  default_prompt: "请用 $clinical-prediction-model-paper-reading 按12步精读这篇论文，还原作者做法，核查关键引文，并总结方法学启示与适用条件。"
